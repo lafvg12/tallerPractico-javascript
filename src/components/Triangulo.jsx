@@ -17,7 +17,7 @@ function Triangulo() {
         CALCULA EL PERÍMETRO Y ÁREA DE UN TRIÁNGULO
       </h3>
       <h5 className="text-center fw-normal mt-3">
-        Ingresa cuanto miden los lados del Triángulo:
+        Click en el check para calcular área y perímetro :
       </h5>
       <div className="form-check">
         <input

@@ -12,11 +12,11 @@ function Figura() {
     return lado * 4;
   };
 
-  function areaCuadrado(ladoCuadrado) {
+  const areaCuadrado = (ladoCuadrado) => {
     return ladoCuadrado * ladoCuadrado;
-  }
+  };
 
-  function calcularPerimetroCuadrado() {
+  const calcularPerimetroCuadrado = () => {
     const input = document.getElementById("InputCuadrado");
     const valor = input.value;
     const perimetro = perimetroCuadrado(valor);
@@ -26,14 +26,14 @@ function Figura() {
       0,
       unidad.length - 1
     )}`;
-  }
-  function calcularAreaCuadrado() {
+  };
+  const calcularAreaCuadrado = () => {
     const area = document.getElementById("InputCuadrado").value;
     const areas = areaCuadrado(area);
     document.querySelector(
       "#result"
     ).innerHTML = `El área es: ${areas} ${unidad}`;
-  }
+  };
 
   return (
     <div className="border border-4 border-dark  rounded-3 bg-info p-3">

@@ -8,18 +8,22 @@ function Perimetrotrian(props) {
     selectPerimetro === "m" ? setPerimetro("m") : setPerimetro("cm");
   };
 
-  function perimetroTriangulo(ladoTriangulo1, ladoTriangulo2, baseTriangulo) {
+  const perimetroTriangulo = (
+    ladoTriangulo1,
+    ladoTriangulo2,
+    baseTriangulo
+  ) => {
     return ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-  }
+  };
 
-  function calcularPerimetroTriangulo() {
+  const calcularPerimetroTriangulo = () => {
     const lado1 = parseInt(document.getElementById("Tlado1").value);
     const lado2 = parseInt(document.getElementById("Tlado2").value);
     const base = parseInt(document.getElementById("baseT").value);
     let resultadoT = perimetroTriangulo(lado1, lado2, base);
     document.querySelector("#triangulo").innerHTML =
       resultadoT + " " + perimetro;
-  }
+  };
 
   return (
     <div className="mb-3 mt-1">

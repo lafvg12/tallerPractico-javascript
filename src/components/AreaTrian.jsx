@@ -12,13 +12,13 @@ function AreaTrian(props) {
     valorSelectArea === "cm" ? setValores("cm2") : setValores("m2");
   };
 
-  function calcularAreaTriangulo() {
+  const calcularAreaTriangulo = () => {
     const baseT = parseInt(document.getElementById("baseT").value);
     const alturaT = parseInt(document.getElementById("alturaT").value);
     let resultadoAreaTriangulo = areaTriangulo(alturaT, baseT);
     document.querySelector("#triangulo").innerHTML =
       resultadoAreaTriangulo + " " + valores;
-  }
+  };
 
   return (
     <div>

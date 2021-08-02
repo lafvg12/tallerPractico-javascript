@@ -8,38 +8,38 @@ function Circulo(props) {
     selectAreaTri === "cm" ? setSelectArea("cm2") : setSelectArea("m2");
   };
 
-  function diametroCirculo(radioCirculo) {
+  const diametroCirculo = (radioCirculo) => {
     return radioCirculo * 2;
-  }
+  };
 
-  function perimetroCirculo(radio) {
+  const perimetroCirculo = (radio) => {
     const pi = Math.PI;
     return pi * diametroCirculo(radio);
-  }
+  };
 
-  function areaCirculo(radioCirculo) {
+  const areaCirculo = (radioCirculo) => {
     const pi = Math.PI;
     return radioCirculo * radioCirculo * pi;
-  }
+  };
 
-  function calcularDiametroCirculo() {
+  const calcularDiametroCirculo = () => {
     const diametro = parseInt(document.getElementById("inputRadio").value);
     const diametroCirculos = diametroCirculo(diametro);
     document.querySelector("#circulo").innerHTML = diametroCirculos;
-  }
+  };
 
-  function calcularPerimetroCirculo() {
+  const calcularPerimetroCirculo = () => {
     const perimetro = parseInt(document.getElementById("inputRadio").value);
     const periCirculo = perimetroCirculo(perimetro);
     document.querySelector("#circulo").innerHTML = periCirculo + " m";
-  }
+  };
 
-  function calcularAreaCirculo() {
+  const calcularAreaCirculo = () => {
     const areaC = parseInt(document.getElementById("inputRadio").value);
     const areaCirculoResultado = parseInt(areaCirculo(areaC));
     document.querySelector("#circulo").innerHTML =
       areaCirculoResultado + " " + selectArea;
-  }
+  };
 
   return (
     <div className="border border-4 border-dark rounded-3 bg-info p-3">
